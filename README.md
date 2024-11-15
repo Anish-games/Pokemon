@@ -17,3 +17,6 @@ Join us on this coding adventure, and by the end, you'll be a master of OOP and 
 ---
 
 Feel free to adjust any details as needed. Happy coding! 🎮🐾
+
+
+![pokemon](https://github.com/user-attachments/assets/08495b15-c9ef-4acc-a0cc-e3d0083c472b)
