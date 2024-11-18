@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6da5fac2-b94e-4f64-9c0b-c57650ea9191}</ProjectGuid>
+    <ProjectGuid>{5a1f1962-acdc-460e-adff-09b408ce7355}</ProjectGuid>
     <RootNamespace>Pokemon</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
