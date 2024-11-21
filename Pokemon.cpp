@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
     string PlayerName;
+
     cout << "Welcome to POKEMON, Please enter your name: ";
     cin >> PlayerName;
     cout << "                                            Hello, " << PlayerName << "! " << endl;
@@ -20,6 +21,7 @@ int main()
     cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>OoO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< " << endl;
     cout << "                                          " << endl;
     cout << "\n Hello there! Welcome to the world of Pokemon!" << endl;
+    cout << "                                          " << endl;
     cout << "My name is Oak! People call me the Pokemon Professor." << endl;
     cout << "                                          " << endl;
     cout << "This world is inhabited by creatures called Pokémon! For some people, Pokemon are pets. Others use them for battles." << endl;
@@ -47,26 +49,38 @@ int main()
     cout << "So, " << PlayerName << ", which Pokemon will you choose?";
     cout << "                                          " << endl;
     int choice;
+    string chosen_pokemon;
     cout << "Enter your Pokemons number: ";
     cin >> choice;
     cout << "                                          " << endl;
-    if (choice == 1)
+    switch (choice)
     {
-        cout << "You chose Bulbasaur! A wise choice.\n";
-        cout << "                                          " << endl;
-    }
-    else if (choice == 2)
-    {
+    case 1:
+        chosen_pokemon = "Bulbasaur";
+            cout << "You chose Bulbasaur! A wise choice.\n";
+            cout << "                                          " << endl;
+    break;
+    case 2:
+        chosen_pokemon = "Charmander";
         cout << "You chose Charmander! A fiery choice.\n";
         cout << "                                          " << endl;
-    }
-    else if (choice == 3)
-    {
+    break;
+    case 3:
+        chosen_pokemon = "Squirtle";
         cout << "You chose Squirtle! A cool choice.\n";
         cout << "                                          " << endl;
+
+    default:
+        cout << "Professor Oak: Hmm, that doesn't seem right. Let me choose "
+            "for you...\n";
+        cout << "                                          " << endl;
+        chosen_pokemon = "Pikachu"; 
+        cout << "Professor Oak: Just kidding! Let's go with Pikachu, the "
+            "surprise guest!\n";
+        cout << "                                          " << endl;
+        cout << "                                          " << endl;
+        break;
     }
-    else { cout << "Invalid choice. Please restart the game.\n"; cout << "                                          " << endl;
-    }
-       
+   
 
 }
