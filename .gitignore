@@ -9,3 +9,5 @@
 *.db-wal
 *.db
 *.db-wal
+*.db
+*.sqlite
