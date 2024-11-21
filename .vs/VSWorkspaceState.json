@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Debug",
+    "\\Pokemon",
+    "\\Pokemon\\Debug"
   ],
-  "SelectedNode": "\\Pokemon.cpp",
+  "SelectedNode": "\\Pokemon.sln",
   "PreviewInSolutionExplorer": false
 }
