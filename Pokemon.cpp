@@ -78,6 +78,7 @@ int main()
         cout << "Professor Oak: Just kidding! Let's go with Pikachu, the "
             "surprise guest!\n";
         cout << "                                          " << endl;
+        cout << "                                          " << endl;
         break;
     }
    
