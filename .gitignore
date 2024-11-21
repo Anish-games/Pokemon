@@ -6,3 +6,4 @@
 .vs/slnx.sqlite
 .vs/Pokemon/v17/Browse.VC.db
 .vs/slnx.sqlite
+*.db
