@@ -1,4 +1,5 @@
 ﻿  Pokemon.cpp
-D:\Pokemon\Pokemon.cpp(13,13): warning C4566: character represented by universal-character-name '\U0001F31F' cannot be represented in the current code page (1252)
-D:\Pokemon\Pokemon.cpp(18,13): warning C4566: character represented by universal-character-name '\u2728' cannot be represented in the current code page (1252)
+D:\Pokemon\Pokemon.cpp(26,13): warning C4566: character represented by universal-character-name '\U0001F31F' cannot be represented in the current code page (1252)
+D:\Pokemon\Pokemon.cpp(31,13): warning C4566: character represented by universal-character-name '\u2728' cannot be represented in the current code page (1252)
+  LINK : D:\Pokemon\x64\Debug\Pokemon.exe not found or not built by the last incremental link; performing full link
   Pokemon.vcxproj -> D:\Pokemon\x64\Debug\Pokemon.exe

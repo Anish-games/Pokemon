@@ -11,3 +11,17 @@
 *.db-wal
 *.db
 *.sqlite
+*.pdb
+*.pdb
+*.exe
+*.pdb
+*.idb
+*.tlog
+*.obj
+*.log
+*.ilk
+*.sqlite
+*.json
+*.json
+*.db
+.vs/Pokemon/v17/.suo
