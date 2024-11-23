@@ -1,105 +1,136 @@
 ﻿#include <iostream>
+#include<string>
 using namespace std;
 
 enum class PokemonChoice {
     Charmander,
     Bulbasaur,
     Squirtle,
-    InvalidChoice
+    Pikachu
 };
 
 enum class PokemonType {
     Fire,
     Grass,
     Water,
-    Unknown
+    Electric
+};
+class Pokemon 
+{
+public:
+    
+    string name;
+    PokemonType type;
+    int health;
+
+    
+    Pokemon() 
+    {
+
+    }
+
+    Pokemon(string p_name, PokemonType p_type, int p_health) {
+        name = p_name;
+        type = p_type;
+        health = p_health;
+    }
+
+    
+    void attack() 
+    {
+        cout << name << "attacks with a powerful move!\n"; 
+    }
 };
 
-int main() {
-    string Player_name;
-    PokemonChoice chosen_pokemon = PokemonChoice::InvalidChoice;
+class Player
+{
+    public:
 
-    cout << "Welcome to POKEMON, Please enter your name: ";
-    cin >> Player_name;
-    cout << "                                            Hello, " << Player_name << "! " << endl;
-    cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>OoO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< " << endl;
-    cout << "🌟 Your Pokemon adventure begins now! 🌟" << endl;
-    cout << "                                          " << endl;
-    cout << "In the world of Pokemon, you'll encounter many wild creatures, battle fierce opponents, and capture your very own Pokemon team." << endl;
-    cout << "Remember, every challenge is an opportunity to become a better trainer. Trust in your Pokemon, believe in yourself, and embark on this exciting journey!" << endl;
-    cout << "Let's get started, " << Player_name << ". The world of Pokémon awaits you!" << endl;
-    cout << "✨ Good luck, and may you become the ultimate Pokemon Master! ✨" << endl;
-    cout << "                                          " << endl;
-    // Professor Oak's Welcome and Pokémon Selection 
-    cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>OoO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< " << endl;
-    cout << "                                          " << endl;
-    cout << "\n Hello there! Welcome to the world of Pokemon!" << endl;
-    cout << "                                          " << endl;
-    cout << "My name is Oak! People call me the Pokemon Professor." << endl;
-    cout << "                                          " << endl;
-    cout << "This world is inhabited by creatures called Pokémon! For some people, Pokemon are pets. Others use them for battles." << endl;
-    cout << "                                          " << endl;
-    cout << "As for myself... I study Pokemon as a profession." << endl;
-    cout << "                                          " << endl;
-    cout << "But first, tell me a little about yourself." << endl;
-    cout << "                                          " << endl;
-    cout << "Right, " << Player_name << "! Your very own Pokemon legend is about to unfold!" << endl;
-    cout << "                                          " << endl;
-    cout << "A world of dreams and adventures with Pokemon awaits! Let's go!" << endl;
-    cout << "                                          " << endl;
-    cout << "\nBut first, here, I have three Pokemon for you to choose from." << endl;
-    cout << "                                          " << endl;
-    cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>OoO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< " << endl;
-    cout << "                                          " << endl;
-    cout << "You can choose one of these three to start your journey with." << endl;
-    cout << "                                          " << endl;
-    cout << "\n1. Bulbasaur - the Grass/Poison type." << endl;
-    cout << "2. Charmander - the Fire type." << endl;
-    cout << "3. Squirtle - the Water type." << endl;
-    cout << "                                          " << endl;
-    cout << ">>>>>>>>>>>>>>>>>>>>>>>>>>>OoO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< " << endl;
-    cout << "                                          " << endl;
-    cout << "So, " << Player_name << ", which Pokemon will you choose?";
-    cout << "                                          " << endl;
-    int choice;
-    cout << "Enter your Pokemon's number: ";
-    cin >> choice;
-    cout << "                                          " << endl;
-    switch (choice) {
-    case 1:
-        chosen_pokemon = PokemonChoice::Bulbasaur;
-        break;
-    case 2:
-        chosen_pokemon = PokemonChoice::Charmander;
-        break;
-    case 3:
-        chosen_pokemon = PokemonChoice::Squirtle;
-        break;
-    default:
-        chosen_pokemon = PokemonChoice::InvalidChoice;
-        break;
-    }
-    switch (chosen_pokemon) {
-    case PokemonChoice::Charmander:
-        cout << "Professor Oak: A fiery choice! Charmander is yours!\n";
-        break;
-    case PokemonChoice::Bulbasaur:
-        cout << "Professor Oak: A fine choice! Bulbasaur is always ready to grow on you!\n";
-        break;
-    case PokemonChoice::Squirtle:
-        cout << "Professor Oak: Splendid! Squirtle will keep you cool under pressure!\n";
-        break;
-    default:
-        cout << "Professor Oak: Hmm, that doesn't seem right. Let me choose for you...\n";
-        chosen_pokemon = PokemonChoice::Charmander; // Default to Charmander if invalid choice
-        cout << "Professor Oak: Just kidding! Let's go with Charmander, the fiery dragon in the making!\n";
-        break;
+    string name; 
+    Pokemon chosenPokemon;
+
+    void choosenPokemon(int choice)
+    {
+        switch ((PokemonChoice)choice)
+        {
+        case PokemonChoice::Charmander:
+                chosenPokemon = Pokemon("Charmander ", PokemonType::Fire, 100);
+                break;
+        case PokemonChoice::Bulbasaur:
+            chosenPokemon = Pokemon("Bulbasaur ", PokemonType::Grass, 100);
+            break;
+        case PokemonChoice::Squirtle:
+            chosenPokemon = Pokemon("Squirtle ", PokemonType::Water, 100);
+            break;
+        default:
+            chosenPokemon = Pokemon("Pikachu ", PokemonType::Electric, 100);
+            break;
+            
+        }
+        cout << "Player " << name << " choice " << chosenPokemon.name << endl;
+
     }
 
-    // Concluding the first chapter
-    cout << "Professor Oak: " << (chosen_pokemon == PokemonChoice::Charmander ? "Charmander" : chosen_pokemon == PokemonChoice::Bulbasaur ? "Bulbasaur" : "Squirtle")
-        << " and you, " << Player_name << ", are going to be the best of friends!\n";
+};
+
+class ProfessorOak    ///////////////////////////////// Greet the player
+{
+    public:
+    string name;
+
+    void greetPlayer(Player& player)
+    {
+        cout << name << ": Hello there! Welcome to the world of Pokemon!\n";
+        cout << name << ": My name is Oak. People call me the Pokemon Professor!\n";
+        cout << name << ": But enough about me. Let's talk about you!\n";
+    }
+    void offerPokemonChoices(Player& player)
+    {
+        cout << name << ": First, tell me, what’s your name?\n";
+        cin.ignore();
+        getline(cin, player.name);
+        cout << name << ": Ah, " << player.name << "! What a fantastic name!\n";
+        cout << name << ": You must be eager to start your adventure. But first, you’ll need a Pokemon of your own!\n";
+        cout << name << ": I have three Pokemon here with me. They’re all quite feisty!\n";
+        cout << name << ": Choose wisely...\n";
+        cout << "1. Charmander - The fire type. A real hothead!"<<endl; //////////////// option
+        cout << "2. Bulbasaur - The grass type. Calm and collected!"<<endl;
+        cout << "3. Squirtle - The water type. Cool as a cucumber!"<<endl;
+
+        int choice;
+        cout << "so " << name << ", which one will it be? Enter the number of your choice: ";
+        cin >> choice;
+        player.choosenPokemon(choice);
+
+    }
+
+
+};
+
+int main() 
+{
+    ProfessorOak professor;
+    Pokemon placeholderPokemon;
+    Player player;
+
+    
+    placeholderPokemon.name = "Pikachu";
+    placeholderPokemon.type = PokemonType::Electric;
+    placeholderPokemon.health = 40;
+
+   
+    player.name = "Trainer";
+
+    
+    professor.name = "Professor Oak";
+
+    
+    professor.greetPlayer(player);
+    professor.offerPokemonChoices(player);
+
+    
+    cout << "Professor Oak: " << player.chosenPokemon.name << " and you, " << player.name << ", are going to be the best of friends!\n";
     cout << "Professor Oak: Your journey begins now! Get ready to explore the vast world of Pokemon!\n";
-
+    
    
 }
