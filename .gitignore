@@ -25,3 +25,11 @@
 *.json
 *.db
 .vs/Pokemon/v17/.suo
+.vs/Pokemon/v17/.suo
+*.db
+*.db-shm
+*.json
+*.json
+*.ipch
+*.sqlite
+*.json
