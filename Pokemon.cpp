@@ -13,7 +13,8 @@ enum class PokemonType {
     Fire,
     Grass,
     Water,
-    Electric
+    Electric,
+    NORMAL
 };
 class Pokemon 
 {
@@ -26,15 +27,33 @@ public:
     
     Pokemon() 
     {
+        name = "Unknown";
+        type = PokemonType::NORMAL;
+        health = 50;
+        cout << "A new Pokemon has been created with the default constructor!\n";
 
     }
 
-    Pokemon(string p_name, PokemonType p_type, int p_health) {
+    Pokemon(string p_name, PokemonType p_type, int p_health) 
+    {
         name = p_name;
         type = p_type;
         health = p_health;
+        cout << "A new Pokemon named " << name << " has been created!\n";
     }
 
+    Pokemon(const Pokemon& other) 
+    {
+        name = other.name;
+        type = other.type;
+        health = other.health;
+        cout << "A new Pokemon has been copied from " << other.name << "!\n";
+    }
+
+    ~Pokemon() 
+    {
+        cout << name << " has been released.\n";
+    }
     
     void attack() 
     {
@@ -48,6 +67,21 @@ class Player
 
     string name; 
     Pokemon chosenPokemon;
+
+    Player()
+    {
+        name = "Trainer";
+        chosenPokemon = Pokemon(); 
+        cout << "A new player named " << name << " has been created!\n";
+    }
+
+    Player(std::string p_name, Pokemon p_chosenPokemon)
+    {
+        name = p_name;
+        chosenPokemon = p_chosenPokemon;
+        cout << "Player " << name << " has been created!\n";
+
+    }
 
     void choosenPokemon(int choice)
     {
@@ -77,6 +111,12 @@ class ProfessorOak    ///////////////////////////////// Greet the player
 {
     public:
     string name;
+
+    ProfessorOak(string p_name) 
+    {
+        name = p_name;
+    }
+
 
     void greetPlayer(Player& player)
     {
@@ -109,28 +149,41 @@ class ProfessorOak    ///////////////////////////////// Greet the player
 
 int main() 
 {
-    ProfessorOak professor;
-    Pokemon placeholderPokemon;
-    Player player;
+    Pokemon defaultPokemon; // Using default constructor
+    Pokemon charmander("Charmander", PokemonType::Fire, 100); // Using parameterized constructor
 
-    
-    placeholderPokemon.name = "Pikachu";
-    placeholderPokemon.type = PokemonType::Electric;
-    placeholderPokemon.health = 40;
+    cout << "Pokemon Details:\n";
+    cout << "Name: " << defaultPokemon.name << "\nType: " << (int)defaultPokemon.type << "\nHealth: " << defaultPokemon.health << "\n";
+    cout << "Name: " << charmander.name << "\nType: " << (int)charmander.type << "\nHealth: " << charmander.health << "\n";
 
-   
-    player.name = "Trainer";
+    // Task 2: Test the copy constructor
+    Pokemon bulbasaur("Bulbasaur", PokemonType::Grass, 100); // Create a Pokemon
+    Pokemon bulbasaurCopy = bulbasaur; // Copy the Pokemon
+    cout << "Original Pokemon Health: " << bulbasaur.health << "\n";
+    cout << "Copied Pokemon Health: " << bulbasaurCopy.health << "\n";
 
-    
-    professor.name = "Professor Oak";
+    // Modify the copy
+    bulbasaurCopy.health = 80;
+    cout << "After Modification:\n";
+    cout << "Original Pokemon Health: " << bulbasaur.health << "\n";
+    cout << "Copied Pokemon Health: " << bulbasaurCopy.health << "\n";
 
-    
+    // Task 3: Test the destructor
+    {
+        Pokemon squirtle("Squirtle", PokemonType::Water, 100); // Pokemon will be destroyed at the end of this scope
+    } // Destructor will be called here
+
+    // Continue with the main flow of the game
+    ProfessorOak professor("Professor Oak");
+    Player player("Ash", charmander);
+
+    // Greet the player and offer Pokemon choices
     professor.greetPlayer(player);
     professor.offerPokemonChoices(player);
 
-    
+    // Conclude the first chapter
     cout << "Professor Oak: " << player.chosenPokemon.name << " and you, " << player.name << ", are going to be the best of friends!\n";
     cout << "Professor Oak: Your journey begins now! Get ready to explore the vast world of Pokemon!\n";
-    
-   
+
+    return 0;
 }
