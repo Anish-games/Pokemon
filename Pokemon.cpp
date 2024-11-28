@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <limits> // Include this header to use numeric_limits
 #include <string>
+#include "header.hpp"
 using namespace std;
 
 // Function to clear the console
@@ -220,10 +221,14 @@ public:
     }
 };
 
+
+
+
 // Function to handle the main game loop
-void gameLoop(Player& player) {
+void gameLoop(Player& player) 
+{
     int choice;
-    bool keepPlaying = true;
+    bool keepPlaying = true;  
 
     while (keepPlaying) {
         // Clear console before showing options
