@@ -1,9 +1,9 @@
-﻿#include <iostream>
+﻿#include "PokemonChoice.hpp"
+#include "PokemonType.hpp"
+#include "Utility.hpp"
+#include <iostream>
 #include <limits> // Include this header to use numeric_limits
 #include <string>
-#include "PokemonType.hpp"
-#include "PokemonChoice.hpp"
-#include "Utility.hpp"
 using namespace std;
 
 // Pokemon class definition
@@ -21,7 +21,7 @@ public:
     }
 
     // Parameterized constructor
-    Pokemon(std::string p_name, PokemonType p_type, int p_health) {
+    Pokemon(string p_name, PokemonType p_type, int p_health) {
         name = p_name;
         type = p_type;
         health = p_health;
@@ -39,46 +39,10 @@ public:
         // Destructor message removed
     }
 
-    void attack() { std::cout << name << " attacks with a powerful move!\n"; }
+    void attack() { cout << name << " attacks with a powerful move!\n"; }
 };
 
-// Player class definition
-class Player {
-public:
-    string name;
-    Pokemon chosenPokemon;
-
-    // Default constructor
-    Player() {
-        name = "Trainer";
-        chosenPokemon = Pokemon(); // Using the default Pokemon constructor
-    }
-
-    // Parameterized constructor
-    Player(std::string p_name, Pokemon p_chosenPokemon) {
-        name = p_name;
-        chosenPokemon = p_chosenPokemon;
-    }
-
-    void choosePokemon(int choice) {
-        switch ((PokemonChoice)choice) {
-        case PokemonChoice::CHARMANDER:
-            chosenPokemon = Pokemon("Charmander", PokemonType::FIRE, 100);
-            break;
-        case PokemonChoice::BULBASAUR:
-            chosenPokemon = Pokemon("Bulbasaur", PokemonType::GRASS, 100);
-            break;
-        case PokemonChoice::SQUIRTLE:
-            chosenPokemon = Pokemon("Squirtle", PokemonType::WATER, 100);
-            break;
-        default:
-            chosenPokemon = Pokemon("Pikachu", PokemonType::ELECTRIC, 100);
-            break;
-        }
-        cout << "Player " << name << " chose " << chosenPokemon.name << "!\n";
-        Utility::waitForEnter(); // Wait for user to press Enter before proceeding
-    }
-};
+#include "Player.hpp"
 
 // ProfessorOak class definition
 class ProfessorOak {
@@ -102,7 +66,7 @@ public:
         cout
             << name
             << ": First, tell me, what’s your name? \t [Please Enter Your Name]\n";
-        getline(std::cin, player.name);
+        getline(cin, player.name);
         cout << name << ": Ah, " << player.name
             << "! What a fantastic name!\n";
         Utility::waitForEnter();
@@ -191,14 +155,10 @@ public:
     }
 };
 
-
-
-
 // Function to handle the main game loop
-void gameLoop(Player& player) 
-{
+void gameLoop(Player& player) {
     int choice;
-    bool keepPlaying = true;  
+    bool keepPlaying = true;
 
     while (keepPlaying) {
         // Clear console before showing options
@@ -214,9 +174,7 @@ void gameLoop(Player& player)
         cout << "Enter your choice: ";
         cin >> choice;
 
-        // Clear the newline character left in the buffer after cin >> choice
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
+        Utility::clearInputBuffer(); // Clear the input buffer
 
         // Process the player's choice and display the corresponding message
         switch (choice) {
