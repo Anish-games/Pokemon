@@ -2,7 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Debug",
-    "\\Pokemon\\Debug"
+    "\\Pokemon",
+    "\\Pokemon\\Debug",
+    "\\Pokemon\\x64",
+    "\\Pokemon\\x64\\Debug",
+    "\\x64",
+    "\\x64\\Debug"
   ],
   "SelectedNode": "\\Pokemon.sln",
   "PreviewInSolutionExplorer": false
