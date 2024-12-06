@@ -17,6 +17,22 @@ Pokemon::Pokemon(string p_name, PokemonType p_type, int p_health) {
 	health = p_health;
 }
 
+void Pokemon::takeDamage(int damage)
+{
+	health -= damage;
+
+	if (health < 0)
+	{
+		health = 0;
+	}
+}
+
+bool Pokemon::isFainted() const
+{
+	return health <= 0;
+
+}
+
 // Copy constructor
 Pokemon::Pokemon(const Pokemon& other) {
 	name = other.name;
@@ -29,6 +45,30 @@ Pokemon::~Pokemon() {
 	// Destructor logic (if any) goes here
 }
 
-void Pokemon::attack() {
-	cout << name << " attacks with a powerful move!\n";
+void Pokemon::attack(Pokemon & target) 
+{
+	int damage = 10;
+
+	cout << name << "attack's " << target.name << " for " << damage << " damage." << endl;
+
+	target.takeDamage(damage);
+}
+
+void battle(Pokemon& playerPokemon, Pokemon& wildPokemon) {
+	cout << "A wild " << wildPokemon.name << " appeared!\\n";
+
+	while (!playerPokemon.isFainted() && !wildPokemon.isFainted()) {
+		playerPokemon.attack(wildPokemon); // Player attacks first
+
+		if (!wildPokemon.isFainted()) {
+			wildPokemon.attack(playerPokemon); // Wild Pokémon attacks back
+		}
+	}
+
+	if (playerPokemon.isFainted()) {
+		cout << playerPokemon.name << " has fainted! You lose the battle.\\n";
+	}
+	else {
+		cout << "You defeated the wild " << wildPokemon.name << "!\\n";
+	}
 }
