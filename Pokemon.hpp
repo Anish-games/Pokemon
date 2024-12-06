@@ -7,6 +7,12 @@ public:
     string name;
     PokemonType type;
     int health;
+    int maxHealth;
+
+    void takeDamage(int damage); // Method to reduce HP
+    bool isFainted() const; // Method to check if the Pokemon has fainted
+
+    
 
     // Default constructor
     Pokemon();
@@ -20,5 +26,7 @@ public:
     // Destructor
     ~Pokemon();
 
-    void attack();
+    void attack(Pokemon& target);
+
+    
 };
