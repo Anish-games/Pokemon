@@ -15,12 +15,14 @@ Game::Game() {
                    70 };
 }
 
-void Game::gameLoop(Player& player) {
+void Game::gameLoop(Player& player) 
+{
 
     int choice;
     bool keepPlaying = true;
 
-    while (keepPlaying) {
+    while (keepPlaying) 
+    {
         // Clear console before showing options
         Utility::clearConsole();
 
@@ -41,8 +43,7 @@ void Game::gameLoop(Player& player) {
         case 1: {
             // Create a scope within case 1
             WildEncounterManager encounterManager;
-            Pokemon encounteredPokemon =
-                encounterManager.getRandomPokemonFromGrass(forestGrass);
+            Pokemon encounteredPokemon = encounterManager.getRandomPokemonFromGrass(forestGrass);
             cout << "A wild " << encounteredPokemon.name << " appeared!\n";
             break;
         }
