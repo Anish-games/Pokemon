@@ -3,6 +3,8 @@
 #include "D:\Pokemon\include\Pokemon\Grass.hpp"
 using namespace std;
 
+namespace N_Pokemon{
+
 enum class PokemonType;
 
 class Pokemon {
@@ -22,3 +24,4 @@ public:
     void attack(Pokemon& target);
     void takeDamage(int damage);
 };
+}

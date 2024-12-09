@@ -4,8 +4,10 @@
 #include "D:\Pokemon\include\Utility\Utility.hpp"
 #include <iostream>
 using namespace std;
+using namespace N_Battle;
 
-void BattleManager::startBattle(Player& player, Pokemon& wildPokemon) {
+
+void BattleManager::startBattle(N_Player::Player& player, N_Pokemon::Pokemon& wildPokemon) {
     battleState.playerPokemon = player.chosenPokemon;
     battleState.wildPokemon = wildPokemon;
     battleState.playerTurn = true;
@@ -26,7 +28,7 @@ void BattleManager::battle() {
 
         updateBattleState();
         battleState.playerTurn = !battleState.playerTurn;
-        Utility::waitForEnter();
+        N_Utility::Utility::waitForEnter();
     }
 
     handleBattleOutcome();
