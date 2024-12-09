@@ -1,24 +1,19 @@
 #pragma once
 #include "D:\Pokemon\include\Pokemon\Grass.hpp"
-#include "D:\Pokemon\include\Pokemon\PokemonType.hpp"
-#include "D:\Pokemon\include\Pokemon\Pokemon.hpp"
-namespace N_Main{
+#include "D:\Pokemon\include\Character\Player.hpp"
 
-class Player;
+// class Player;
+namespace N_Main
+{
+    using namespace N_Pokemon;
+    using namespace N_Character::N_Player;
 
-class Game {
-private:
-    N_Pokemon::Grass forestGrass;
-public:
-    Game() {
-        // Create a sample grass environment with actual Pokemon objects
-        forestGrass = { "Forest",
-            { N_Pokemon::Pokemon("Pidgey", N_Pokemon::PokemonType::NORMAL, 40, 7),
-            N_Pokemon::Pokemon("Caterpie", N_Pokemon::PokemonType::BUG, 35, 5),
-            N_Pokemon::Pokemon("Zubat", N_Pokemon::PokemonType::POISON, 30, 8) },
-            70 };
-    }
-  void gameLoop(N_Player::Player &player);
-  void visitPokeCenter(N_Player::Player &player);
-};
+    class Game {
+    private:
+        Grass forestGrass;
+    public:
+        Game();
+        void gameLoop(Player& player);
+        void visitPokeCenter(Player& player);
+    };
 }

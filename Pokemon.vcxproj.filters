@@ -42,13 +42,19 @@
     <ClCompile Include="src\Pokemon\Pikachu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pokemon\Pidgey.cpp">
+    <ClCompile Include="src\Pokemon\Charmander.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pokemon\Caterpie.cpp">
+    <ClCompile Include="src\Pokemon\Balbasaur.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pokemon\Zubat.cpp">
+    <ClCompile Include="src\Pokemon\Pokemons\Caterpie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pokemon\Pokemons\Pidgey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pokemon\Pokemons\Zubat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -89,13 +95,19 @@
     <ClInclude Include="include\Pokemon\Pikachu.hpp">
       <Filter>Include Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Pokemon\Pidgey.hpp">
+    <ClInclude Include="include\Pokemon\Charmander.hpp">
       <Filter>Include Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Pokemon\Caterpie.hpp">
+    <ClInclude Include="include\Pokemon\Balbasaur.hpp">
       <Filter>Include Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Pokemon\Zubat.hpp">
+    <ClInclude Include="include\Pokemon\Pokemons\Caterpie.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pokemon\Pokemons\Pidgey.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pokemon\Pokemons\Zubat.hpp">
       <Filter>Include Files</Filter>
     </ClInclude>
   </ItemGroup>
