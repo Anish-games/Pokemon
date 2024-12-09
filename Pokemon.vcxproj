@@ -127,26 +127,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BattleManager.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pokemon.cpp" />
-    <ClCompile Include="ProfessorOak.cpp" />
-    <ClCompile Include="Utility.cpp" />
-    <ClCompile Include="WildEncounterManager.cpp" />
+    <ClCompile Include="D:\Pokemon\src\Battle\BattleManager.cpp" />
+    <ClCompile Include="D:\Pokemon\src\Main\Game.cpp" />
+    <ClCompile Include="D:\Pokemon\src\Character\Player.cpp" />
+    <ClCompile Include="D:\Pokemon\src\main.cpp" />
+    <ClCompile Include="D:\Pokemon\src\Pokemon\Pokemon.cpp" />
+    <ClCompile Include="D:\Pokemon\src\Character\ProfessorOak.cpp" />
+    <ClCompile Include="D:\Pokemon\src\Utility\Utility.cpp" />
+    <ClCompile Include="D:\Pokemon\src\Battle\WildEncounterManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BattleManager.hpp" />
-    <ClInclude Include="Game.hpp" />
-    <ClInclude Include="Grass.hpp" />
-    <ClInclude Include="Player.hpp" />
-    <ClInclude Include="Pokemon.hpp" />
-    <ClInclude Include="PokemonChoice.hpp" />
-    <ClInclude Include="PokemonType.hpp" />
-    <ClInclude Include="ProfessorOak.hpp" />
-    <ClInclude Include="Utility.hpp" />
-    <ClInclude Include="WildEncounterManager.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Battle\BattleManager.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Battle\BattleState.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Main\Game.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Pokemon\Grass.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Character\Player.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Pokemon\Pokemon.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Pokemon\PokemonChoice.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Pokemon\PokemonType.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Character\ProfessorOak.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Utility\Utility.hpp" />
+    <ClInclude Include="D:\Pokemon\include\Battle\WildEncounterManager.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
