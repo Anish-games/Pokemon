@@ -6,31 +6,33 @@
 #include "iostream"
 using namespace std;
 
+using namespace N_Player;
+
 Player::Player() {
     name = "Trainer";
-    chosenPokemon = Pokemon(); // Using the default Pokemon constructor
+    chosenPokemon = N_Pokemon::Pokemon(); // Using the default Pokemon constructor
 }
 
-Player::Player(string p_name, Pokemon p_chosenPokemon) {
+Player::Player(string p_name, N_Pokemon::Pokemon p_chosenPokemon) {
     name = p_name;
     chosenPokemon = p_chosenPokemon;
 }
 
 void Player::choosePokemon(int choice) {
-    switch ((PokemonChoice)choice) {
-    case PokemonChoice::CHARMANDER:
-        chosenPokemon = Pokemon("Charmander", PokemonType::FIRE, 100, 10);
+    switch ((N_Pokemon::PokemonChoice)choice) {
+    case N_Pokemon::PokemonChoice::CHARMANDER:
+        chosenPokemon = N_Pokemon::Pokemon("Charmander", N_Pokemon::PokemonType::FIRE, 100, 10);
         break;
-    case PokemonChoice::BULBASAUR:
-        chosenPokemon = Pokemon("Bulbasaur", PokemonType::GRASS, 100, 8);
+    case N_Pokemon::PokemonChoice::BULBASAUR:
+        chosenPokemon = N_Pokemon::Pokemon("Bulbasaur", N_Pokemon::PokemonType::GRASS, 100, 8);
         break;
-    case PokemonChoice::SQUIRTLE:
-        chosenPokemon = Pokemon("Squirtle", PokemonType::WATER, 100, 9);
+    case N_Pokemon::PokemonChoice::SQUIRTLE:
+        chosenPokemon = N_Pokemon::Pokemon("Squirtle", N_Pokemon::PokemonType::WATER, 100, 9);
         break;
     default:
-        chosenPokemon = Pokemon("Pikachu", PokemonType::ELECTRIC, 100, 12);
+        chosenPokemon = N_Pokemon::Pokemon("Pikachu", N_Pokemon::PokemonType::ELECTRIC, 100, 12);
         break;
     }
     cout << "Player " << name << " chose " << chosenPokemon.name << "!\n";
-    Utility::waitForEnter(); // Wait for user to press Enter before proceeding
+    N_Utility::Utility::waitForEnter(); // Wait for user to press Enter before proceeding
 }

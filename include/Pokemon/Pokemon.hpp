@@ -3,9 +3,17 @@
 #include "D:\Pokemon\include\Pokemon\Grass.hpp"
 using namespace std;
 
+namespace N_Pokemon{
+
 enum class PokemonType;
 
 class Pokemon {
+protected:
+    string name;
+    PokemonType type;
+    int health;
+    int maxHealth;
+    int attackPower;
 public:
     string name;
     PokemonType type;
@@ -22,3 +30,4 @@ public:
     void attack(Pokemon& target);
     void takeDamage(int damage);
 };
+}

@@ -4,6 +4,8 @@
 #include <limits>
 using namespace std;
 
+using namespace N_Utility;
+
 void Utility::clearConsole() {
 #ifdef _WIN32
 	system("cls");

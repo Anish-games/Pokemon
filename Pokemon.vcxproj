@@ -135,6 +135,10 @@
     <ClCompile Include="D:\Pokemon\src\Character\ProfessorOak.cpp" />
     <ClCompile Include="D:\Pokemon\src\Utility\Utility.cpp" />
     <ClCompile Include="D:\Pokemon\src\Battle\WildEncounterManager.cpp" />
+    <ClCompile Include="src\Pokemon\Caterpie.cpp" />
+    <ClCompile Include="src\Pokemon\Pidgey.cpp" />
+    <ClCompile Include="src\Pokemon\Pikachu.cpp" />
+    <ClCompile Include="src\Pokemon\Zubat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Pokemon\include\Battle\BattleManager.hpp" />
@@ -148,6 +152,10 @@
     <ClInclude Include="D:\Pokemon\include\Character\ProfessorOak.hpp" />
     <ClInclude Include="D:\Pokemon\include\Utility\Utility.hpp" />
     <ClInclude Include="D:\Pokemon\include\Battle\WildEncounterManager.hpp" />
+    <ClInclude Include="include\Pokemon\Caterpie.hpp" />
+    <ClInclude Include="include\Pokemon\Pidgey.hpp" />
+    <ClInclude Include="include\Pokemon\Pikachu.hpp" />
+    <ClInclude Include="include\Pokemon\Zubat.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

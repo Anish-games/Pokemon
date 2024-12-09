@@ -3,9 +3,11 @@
 class Player;
 class Pokemon;
 
+namespace N_Battle{
+
 class BattleManager {
 public:
-    void startBattle(Player& player, Pokemon& wildPokemon);
+    void startBattle(N_Player::Player& player, N_Pokemon::Pokemon& wildPokemon);
 private:
     BattleState battleState;
 
@@ -13,3 +15,4 @@ private:
     void handleBattleOutcome();
     void updateBattleState();
 };
+}

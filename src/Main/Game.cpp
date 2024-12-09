@@ -8,17 +8,19 @@
 #include <iostream>
 using namespace std;
 
-void Game::gameLoop(Player& player) {
+using namespace N_Main;
+
+void Game::gameLoop(N_Player::Player& player) {
 
     int choice;
     bool keepPlaying = true;
-    BattleManager battleManager;
-    WildEncounterManager encounterManager;
-    Pokemon wildPokemon;
+    N_Battle::BattleManager battleManager;
+    N_Battle::WildEncounterManager encounterManager;
+    N_Pokemon::Pokemon wildPokemon;
 
     while (keepPlaying) {
         // Clear console before showing options
-        Utility::clearConsole();
+        N_Utility::Utility::clearConsole();
 
         // Display options to the player
         cout << "\nWhat would you like to do next, " << player.name << "?\n";
@@ -30,7 +32,7 @@ void Game::gameLoop(Player& player) {
         cout << "Enter your choice: ";
         cin >> choice;
 
-        Utility::clearInputBuffer(); // Clear the input buffer
+        N_Utility::Utility::clearInputBuffer(); // Clear the input buffer
 
         // Process the player's choice and display the corresponding message
         switch (choice) {
@@ -73,20 +75,20 @@ void Game::gameLoop(Player& player) {
 
         // Wait for Enter key before the screen is cleared and the menu is shown
         // again
-        Utility::waitForEnter();
+        N_Utility::Utility::waitForEnter();
     }
 
     cout << "Goodbye, " << player.name << "! Thanks for playing!\n";
 }
 
-void Game::visitPokeCenter(Player& player) {
+void Game::visitPokeCenter(N_Player::Player& player) {
     if (player.chosenPokemon.health == player.chosenPokemon.maxHealth) {
         cout << "Your Pokémon is already at full health!\n";
     }
     else {
         cout << "You head to the PokeCenter.\n";
         cout << "Healing your Pokémon...\n";
-        Utility::waitForEnter(); // Simulate a short pause for the healing process
+        N_Utility::Utility::waitForEnter(); // Simulate a short pause for the healing process
         player.chosenPokemon.heal(); // Heal the player's Pokémon
         cout << player.chosenPokemon.name << "'s health is fully restored!\n";
     }
