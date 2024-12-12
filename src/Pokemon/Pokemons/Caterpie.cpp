@@ -3,7 +3,6 @@
 #include <iostream>
 
 namespace N_Pokemon {
-
     namespace N_Pokemons {
 
         using namespace std;
@@ -13,6 +12,10 @@ namespace N_Pokemon {
         void Caterpie::bugBite(Pokemon& target) {
             cout << name << " uses Bug Bite on " << target.name << "!\n";
             target.takeDamage(20);
+        }
+
+        void Caterpie::attack(Pokemon& target) {
+            bugBite(target); // Call the unique move
         }
     }
 }
