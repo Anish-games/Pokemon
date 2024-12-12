@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\include",
+    "\\include\\Battle",
+    "\\include\\Character",
+    "\\include\\Pokemon",
+    "\\include\\Pokemon\\Pokemons",
+    "\\src",
+    "\\src\\Pokemon",
+    "\\src\\Pokemon\\Pokemons",
+    "\\src\\Utility"
   ],
   "SelectedNode": "\\Pokemon.sln",
   "PreviewInSolutionExplorer": false

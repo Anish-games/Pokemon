@@ -1,15 +1,20 @@
 #pragma once
+#include "D:\Pokemon\include\Character\Player.hpp"
 #include <iostream>
-using namespace std;
-
 class Player;
 
-class ProfessorOak {
-public:
-	string name;
+namespace N_Character
+{
+    using namespace std;
+    using namespace N_Player;
 
-	ProfessorOak(string p_name);
-	void greetPlayer(Player& player);
-	void offerPokemonChoices(Player& player);
-	void explainMainQuest(Player& player);
-};
+    class ProfessorOak {
+    public:
+        string name;
+
+        ProfessorOak(string p_name);
+        void greetPlayer(Player& player);
+        void offerPokemonChoices(Player& player);
+        void explainMainQuest(Player& player);
+    };
+}
