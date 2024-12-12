@@ -1,9 +1,4 @@
-﻿  Game.cpp
-  Player.cpp
-  Caterpie.cpp
-  Charmander.cpp
-  Pidgey.cpp
-  Pikachu.cpp
-  Zubat.cpp
+﻿  main.cpp
+  ProfessorOak.cpp
   Generating Code...
   Pokemon.vcxproj -> D:\Pokemon\x64\Debug\Pokemon.exe

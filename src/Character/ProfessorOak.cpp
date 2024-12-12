@@ -10,7 +10,7 @@ namespace N_Character
     using namespace N_Utility;
     using namespace N_Player;
 
-    ProfessorOak::ProfessorOak(string p_name) { name = p_name; }
+    ProfessorOak::ProfessorOak(const string p_name) { name = p_name; }
 
     void ProfessorOak::greetPlayer(Player& player) {
 
