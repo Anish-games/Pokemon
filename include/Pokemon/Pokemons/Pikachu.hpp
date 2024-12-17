@@ -7,8 +7,7 @@ namespace N_Pokemon {
         class Pikachu : public Pokemon {
         public:
             Pikachu();
-            void thunderShock(Pokemon& target);
-            void attack(Pokemon& target) override; // Override base class function
+            void attack(Move selectedMove, Pokemon* target) override;
         };
 
     }

@@ -39,15 +39,6 @@
     <ClCompile Include="D:\Pokemon\src\Battle\WildEncounterManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Pokemon\Pikachu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Pokemon\Charmander.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Pokemon\Balbasaur.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Pokemon\Pokemons\Caterpie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -55,6 +46,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Pokemon\Pokemons\Zubat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pokemon\Pokemons\Charmander.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pokemon\Pokemons\Pikachu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pokemon\Pokemons\Bulbasaur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Pokemon\Pokemons\Squirtle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,15 +95,6 @@
     <ClInclude Include="D:\Pokemon\include\Battle\WildEncounterManager.hpp">
       <Filter>Include Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Pokemon\Pikachu.hpp">
-      <Filter>Include Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Pokemon\Charmander.hpp">
-      <Filter>Include Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Pokemon\Balbasaur.hpp">
-      <Filter>Include Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Pokemon\Pokemons\Caterpie.hpp">
       <Filter>Include Files</Filter>
     </ClInclude>
@@ -108,6 +102,24 @@
       <Filter>Include Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Pokemon\Pokemons\Zubat.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pokemon\Pokemons\Charmander.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pokemon\Pokemons\Pikachu.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pokemon\Pokemons\Bulbasaur.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Battle\Move\move.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Battle\Move\MoveName.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pokemon\Pokemons\Squirtle.hpp">
       <Filter>Include Files</Filter>
     </ClInclude>
   </ItemGroup>
