@@ -60,6 +60,9 @@
     <ClCompile Include="src\Pokemon\Pokemons\Squirtle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="include\StatusEffects\ParalyzedEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Pokemon\include\Battle\BattleManager.hpp">
@@ -120,6 +123,9 @@
       <Filter>Include Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Pokemon\Pokemons\Squirtle.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StatusEffects\ParalyzedEffect.hpp">
       <Filter>Include Files</Filter>
     </ClInclude>
   </ItemGroup>

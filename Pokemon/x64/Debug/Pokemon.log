@@ -1,6 +1,8 @@
-﻿  Player.cpp
-  Squirtle.cpp
-  Zubat.cpp
-D:\Pokemon\src\Pokemon\Pokemons\Zubat.cpp(26,52): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+﻿  BattleManager.cpp
+  Game.cpp
+  main.cpp
+  ParalyzedEffect.cpp
+  Pidgey.cpp
+  Pikachu.cpp
   Generating Code...
   Pokemon.vcxproj -> D:\Pokemon\x64\Debug\Pokemon.exe
