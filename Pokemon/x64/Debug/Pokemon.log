@@ -1,4 +1,8 @@
-﻿  main.cpp
-  ProfessorOak.cpp
+﻿  BattleManager.cpp
+  Game.cpp
+  main.cpp
+  ParalyzedEffect.cpp
+  Pidgey.cpp
+  Pikachu.cpp
   Generating Code...
   Pokemon.vcxproj -> D:\Pokemon\x64\Debug\Pokemon.exe

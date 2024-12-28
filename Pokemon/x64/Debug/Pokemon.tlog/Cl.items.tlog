@@ -6,8 +6,11 @@ D:\Pokemon\src\Pokemon\Pokemon.cpp;D:\Pokemon\Pokemon\x64\Debug\Pokemon.obj
 D:\Pokemon\src\Character\ProfessorOak.cpp;D:\Pokemon\Pokemon\x64\Debug\ProfessorOak.obj
 D:\Pokemon\src\Utility\Utility.cpp;D:\Pokemon\Pokemon\x64\Debug\Utility.obj
 D:\Pokemon\src\Battle\WildEncounterManager.cpp;D:\Pokemon\Pokemon\x64\Debug\WildEncounterManager.obj
+D:\Pokemon\include\StatusEffects\ParalyzedEffect.cpp;D:\Pokemon\Pokemon\x64\Debug\ParalyzedEffect.obj
+D:\Pokemon\src\Pokemon\Pokemons\Bulbasaur.cpp;D:\Pokemon\Pokemon\x64\Debug\Bulbasaur.obj
 D:\Pokemon\src\Pokemon\Pokemons\Caterpie.cpp;D:\Pokemon\Pokemon\x64\Debug\Caterpie.obj
 D:\Pokemon\src\Pokemon\Pokemons\Charmander.cpp;D:\Pokemon\Pokemon\x64\Debug\Charmander.obj
 D:\Pokemon\src\Pokemon\Pokemons\Pidgey.cpp;D:\Pokemon\Pokemon\x64\Debug\Pidgey.obj
 D:\Pokemon\src\Pokemon\Pokemons\Pikachu.cpp;D:\Pokemon\Pokemon\x64\Debug\Pikachu.obj
+D:\Pokemon\src\Pokemon\Pokemons\Squirtle.cpp;D:\Pokemon\Pokemon\x64\Debug\Squirtle.obj
 D:\Pokemon\src\Pokemon\Pokemons\Zubat.cpp;D:\Pokemon\Pokemon\x64\Debug\Zubat.obj
