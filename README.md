@@ -19,3 +19,4 @@ Gym and League Battles: Compete in gyms and Pokémon leagues to become the ultim
 Join us on this coding adventure, and by the end, you'll be a master of OOP and a top-notch Pokémon Trainer!
 
 ![09_21_2024__12_47_12](https://github.com/user-attachments/assets/591b0223-8a6b-4515-9754-596d105ec32d)
+![download (2)](https://github.com/user-attachments/assets/90ff6a00-daf9-4e7b-92bc-f48846e360c1)
